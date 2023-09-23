@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>My first app</title>
+</head>
+<body>
+    <h1>About Me</h1>
+    <p>
+        Name: Vlad<br>
+        Age: 21<br>
+        University or Job: TUSUR
+    </p>
+    
+    <h2>My Favorite Picture</h2>
+    <img src="sq.jpg" alt="My Favorite Picture">
+    
+    <h2>Calculator</h2>
+    <label for="textfieldA">Text field A:</label>
+    <input type="text" id="textfieldA" value="0" oninput="calculateSum()">
+    
+    <br>
+    
+    <label for="textfieldB">Text field B:</label>
+    <input type="text" id="textfieldB" value="0" oninput="calculateSum()">
+    
+    <p id="result">Result: 0</p>
+
+    <script>
+        function calculateSum() {
+                    const textFieldA = parseFloat(document.getElementById('textfieldA').value) || 0;
+                    const textFieldB = parseFloat(document.getElementById('textfieldB').value) || 0;
+                    const result = textFieldA + textFieldB;
+
+                    document.getElementById('result').textContent = `Result: ${result}`;
+                }
+
+    </script>
+</body>
+</html>
